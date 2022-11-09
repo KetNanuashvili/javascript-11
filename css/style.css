@@ -1,0 +1,46 @@
+.accordion{
+    width: 70%;
+}
+.accordion-title {
+    position: relative;
+}
+.accordion-title::before{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+.container.active .accordion-title::before{
+    content: "-";
+}
+.content{
+    height: 0;
+    font-size: 25px;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container.active .content{
+    height: 150px;
+    padding-top: 20px;
+}
+
+body{
+    height: 2000px;
+}
+#top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: aqua;
+    width: 30px;
+    height: 30px;
+}
+
+/*filter*/
+.user-list li.hide{
+    display: none;
+}
